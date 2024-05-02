@@ -15,3 +15,7 @@ def single_course(request):
 
 def contact_us(request):
     return render(request, 'Main/contact_us.html')
+
+
+def about_us(request):
+    return render(request, 'Main/about_us.html')
