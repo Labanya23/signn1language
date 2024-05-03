@@ -100,14 +100,15 @@
 
                     <div class="modal-body">
                         <!-- Form Signin -->
-                        <form class="mb-5">
+                        <form class="mb-5" >
+
 
                             <!-- Email -->
                             <div class="form-group mb-5">
                                 <label for="modalSigninEmail">
                                     Username or Email
                                 </label>
-                                <input type="email" class="form-control" id="modalSigninEmail" placeholder="creativelayers">
+                                <input type="email" class="form-control" id="modalSigninEmail" placeholder="creativelayers" >
                             </div>
 
                             <!-- Password -->
@@ -160,14 +161,15 @@
 
                     <div class="modal-body">
                         <!-- Form Signup -->
-                        <form class="mb-5">
+                        <form class="mb-5" method="POST"action="{% url 'register' %}">
+                            {% csrf_token %}
 
                             <!-- Username -->
                             <div class="form-group mb-5">
                                 <label for="modalSignupUsername">
                                     Username
                                 </label>
-                                <input type="text" class="form-control" id="modalSignupUsername" placeholder="John">
+                                <input type="text" class="form-control" id="modalSignupUsername" placeholder="John" name="username">
                             </div>
 
                             <!-- Email -->
@@ -175,7 +177,7 @@
                                 <label for="modalSignupEmail">
                                     Username or Email
                                 </label>
-                                <input type="email" class="form-control" id="modalSignupEmail" placeholder="johndoe@creativelayers.com">
+                                <input type="email" class="form-control" id="modalSignupEmail" placeholder="johndoe@creativelayers.com" name="email">
                             </div>
 
                             <!-- Password -->
@@ -183,7 +185,7 @@
                                 <label for="modalSignupPassword">
                                     Password
                                 </label>
-                                <input type="password" class="form-control" id="modalSignupPassword" placeholder="**********">
+                                <input type="password" class="form-control" id="modalSignupPassword" placeholder="**********" name="password">
                             </div>
 
                             <!-- Submit -->
