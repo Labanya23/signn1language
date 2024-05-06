@@ -49,4 +49,5 @@ def do_login(request):
             return redirect('login')
 
 
-
+def profile(request):
+    return render(request, 'registration/profile.html')
