@@ -51,3 +51,15 @@ def do_login(request):
 
 def profile(request):
     return render(request, 'registration/profile.html')
+
+
+def profile_update(request):
+    if request.method == "POST":
+        user_name = request.POST.get('username')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user_id = request.user.id
+        //print(user_id)
+    return None
